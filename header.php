@@ -26,20 +26,22 @@
 
 <body <?php body_class(); ?>>
 <div class="container-fluid" id="page" class="site">
-	<div class="header row">
+	<div style="background-image: url(<?php echo wp_get_attachment_image_src( 21, 'full', false )[0]  ?>)" class="header row">
 		<div class="header-nav-text container">
 			<nav class="navbar navbar-expand-lg navbar-light">
-				<a class="navbar-brand" href="#"><img src="images/logo.png" alt=""></a>
+				<a class="navbar-brand" href="#"><img src="<?php echo wp_get_attachment_image_src( 19, 'full', false )[0]  ?>" alt=""></a>
+				
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 					<div class="navbar-nav ml-auto">
-						<a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+						<?php wp_nav_menu(array('menu_class' => 'nav navbar-nav navbar-right nav-items')); ?>
+						<!-- <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
 						<a class="nav-item nav-link" href="#">About Us</a>
 						<a class="nav-item nav-link" href="#">Production</a>
 						<a class="nav-item nav-link" href="#">Products</a>
-						<a class="nav-item nav-link" href="#">Contact</a>
+						<a class="nav-item nav-link" href="#">Contact</a> -->
 					</div>
 				</div>
 			</nav>

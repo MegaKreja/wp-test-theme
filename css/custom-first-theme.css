@@ -1,0 +1,11 @@
+.nav-items {
+  font-family: 'Raleway', sans-serif;
+}
+
+.nav-items a {
+  white-space: nowrap;
+  text-decoration: none;
+  color: #414b61;
+  font-size: 15px;
+  padding: 3% 10% 0 10%;
+}

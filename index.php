@@ -14,8 +14,8 @@
 
 get_header();
 ?>
-
 	<div id="primary" class="content-area">
+		<h1>Prvi blogovi</h1>
 		<main id="main" class="site-main">
 		<?php
 		if ( have_posts() ) :
@@ -54,5 +54,4 @@ get_header();
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

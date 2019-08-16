@@ -20,7 +20,7 @@
 				<a href="#">About</a>
 				<a href="#">Contact</a>
 			</div>
-			<div class="col-12 col-lg-4 order-first order-lg-0"><img class="logo" src="images/logo.png" alt="logo"></div>
+			<div class="col-12 col-lg-4 order-first order-lg-0"><img class="logo" src="<?php echo wp_get_attachment_image_src( 19, 'full', false )[0]  ?>" alt=""></div>
 			<div class="col-12 col-lg-4">&copy; 2019 Helendo. All rights reserved.</div>
 		</div>
 	</div>
