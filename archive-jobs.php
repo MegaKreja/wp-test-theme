@@ -11,7 +11,7 @@ get_header();
 ?>
 
 	<div id="primary" class="content-area">
-		<h1>Hello</h1>
+		<h1><?php the_field('hidden'); ?></h1>
 		<main id="main" class="site-main">
 
 		<?php if ( have_posts() ) : ?>
@@ -50,5 +50,4 @@ get_header();
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();
