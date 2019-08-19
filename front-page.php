@@ -15,6 +15,16 @@
 
 get_header();
 ?>
+	<div style="background-image: url(<?php echo wp_get_attachment_image_src( 21, 'full', false )[0]  ?>)" class="header row">
+		<div class="header-nav-text container">
+			<div class="header-text text-center text-md-left">
+				<h1>Otpresci za stolice</h1>
+				<hr class="hr mx-auto m-md-0">
+				<p>Nudimo kvalitetan i raznovrsan<br> asortiman poluproizvoda za izradu stolica,<br> sedišta, rukonaslone, školjke, itd.</p>
+				<button type="button" class="btn btn-outline-dark">Proizvodi</button>
+			</div>
+		</div>
+	</div>
 	<div id="primary" class="content-area">
 		<div class="aboutUs">
 			<div class="aboutUs-content content">

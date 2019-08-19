@@ -22,36 +22,31 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<script src="https://kit.fontawesome.com/ab3130ba7b.js"></script>
 	<?php wp_head(); ?>
+	<?php if( is_home() || is_front_page() ) : ?>
+	<style>
+			.navbar {
+				position: absolute; 
+				width: 80%;
+			}
+	</style>
+	<?php endif; ?>
 </head>
 
 <body <?php body_class(); ?>>
 <div class="container-fluid" id="page" class="site">
-	<div style="background-image: url(<?php echo wp_get_attachment_image_src( 21, 'full', false )[0]  ?>)" class="header row">
-		<div class="header-nav-text container">
-			<nav class="navbar navbar-expand-lg navbar-light">
-				<a class="navbar-brand" href="#"><img src="<?php echo wp_get_attachment_image_src( 19, 'full', false )[0]  ?>" alt=""></a>
-				
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-					<div class="navbar-nav ml-auto">
-						<?php wp_nav_menu(array('menu_class' => 'nav navbar-nav navbar-right nav-items')); ?>
-						<!-- <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-						<a class="nav-item nav-link" href="#">About Us</a>
-						<a class="nav-item nav-link" href="#">Production</a>
-						<a class="nav-item nav-link" href="#">Products</a>
-						<a class="nav-item nav-link" href="#">Contact</a> -->
+		<div class="container">
+				<nav class="navbar navbar-expand-lg navbar-light">
+					<a class="navbar-brand" href="#"><img src="<?php echo wp_get_attachment_image_src( 19, 'full', false )[0]  ?>" alt=""></a>
+					
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+						<div class="navbar-nav ml-auto">
+							<?php wp_nav_menu(array('menu_class' => 'nav navbar-nav navbar-right nav-items')); ?>
+						</div>
 					</div>
-				</div>
-			</nav>
-			<div class="header-text text-center text-md-left">
-				<h1>Otpresci za stolice</h1>
-				<hr class="hr mx-auto m-md-0">
-				<p>Nudimo kvalitetan i raznovrsan<br> asortiman poluproizvoda za izradu stolica,<br> sedišta, rukonaslone, školjke, itd.</p>
-				<button type="button" class="btn btn-outline-dark">Proizvodi</button>
-			</div>
+				</nav>
 		</div>
-	</div>
 
 	<div id="content" class="site-content">

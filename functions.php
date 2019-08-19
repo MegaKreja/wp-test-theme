@@ -7,6 +7,29 @@
  * @package first-wp-theme
  */
 
+// Creates Careers Custom Post Type
+add_filter('acf/settings/remove_wp_meta_box', '__return_false');
+function careers() {
+	$args = array(
+		'label' => 'Careers',
+			'public' => true,
+			'show_ui' => true,
+			'capability_type' => 'post',
+			'hierarchical' => false,
+			'rewrite' => array('slug' => 'careers'),
+			'query_var' => true,
+			'menu_icon' => 'dashicons-video-alt',
+			'supports' => array(
+					'title',
+					'editor',
+					'excerpt',
+					'custom-fields',
+					'thumbnail')
+			);
+	register_post_type( 'careers', $args );
+}
+add_action( 'init', 'careers' );
+
 if ( ! function_exists( 'first_wp_theme_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
