@@ -15,7 +15,7 @@
 get_header();
 ?>
 	<div id="primary" class="content-area">
-		<h1>Prvi blogovi</h1>
+		<!-- <h1>Prvi blogovi</h1> -->
 		<main id="main" class="site-main">
 		<?php
 		if ( have_posts() ) :
@@ -31,7 +31,7 @@ get_header();
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
-
+				the_excerpt(25);
 				/*
 				 * Include the Post-Type-specific template for the content.
 				 * If you want to override this in a child theme, then include a file

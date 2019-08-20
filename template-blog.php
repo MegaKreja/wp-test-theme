@@ -15,9 +15,10 @@ if ( $the_query->have_posts() ) {
     echo '<div>';
     while ( $the_query->have_posts() ) {
         $the_query->the_post();
-        echo '<h3>' . get_the_title() . '</h3>';
+        echo '<a href="'. get_the_permalink() .'">' . get_the_title() . '</a>';
         echo '<p>' . get_the_content() . '</p>';
         echo '<p>' . get_the_excerpt() . '</p>';
+        echo '<p>' . get_author_name() . '</p>';
     }
     echo '</div>';
 } else {

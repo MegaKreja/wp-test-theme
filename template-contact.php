@@ -1,6 +1,7 @@
 <?php
 /*Template Name: Contact*/
 get_header();?>
+<?php echo do_shortcode( '[wpforms id="109"]' ) ?>
 <div class="contact-info middle-grey row">
   <div class="col-12 col-lg-2"></div>
   <div class="content contact-info-text col-12 col-lg-4">

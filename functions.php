@@ -7,6 +7,15 @@
  * @package first-wp-theme
  */
 
+add_filter( 'get_the_excerpt', function( $excerpt, $post ) {
+	if ( has_excerpt( $post ) ) {
+			$excerpt_length = apply_filters( 'excerpt_length', 15 );
+			$excerpt_more   = apply_filters( 'excerpt_more', ' ' . '&hellip;' );
+			$excerpt        = wp_trim_words( $excerpt, $excerpt_length, $excerpt_more );
+	}
+	return $excerpt;
+}, 10, 2 );
+
 // Creates Careers Custom Post Type
 add_filter('acf/settings/remove_wp_meta_box', '__return_false');
 function careers() {
@@ -28,6 +37,7 @@ function careers() {
 			);
 	register_post_type( 'careers', $args );
 }
+
 add_action( 'init', 'careers' );
 
 if ( ! function_exists( 'first_wp_theme_setup' ) ) :
@@ -148,6 +158,10 @@ function first_wp_theme_scripts() {
 
 	wp_enqueue_script( 'first-wp-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
+	wp_enqueue_script( 'first-wp-theme-custom-script', get_template_directory_uri() . '/js/custom-script.js', array(), '1.0', true );
+
+	// wp_enqueue_script( 'first-wp-theme-float-panel', get_template_directory_uri() . '/js/float-panel.js', array(), '1.0', true );
+
 	wp_enqueue_script( 'first-wp-theme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -182,4 +196,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
