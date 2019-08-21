@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .nav-items {
   font-family: 'Raleway', sans-serif;
 }
@@ -50,4 +54,11 @@
 
 .aboutUs-content {
   overflow: auto;
+}
+
+.header-is-sticky {
+  position: fixed;
+  background: white;
+  width: 100%;
+  z-index: 100;
 }

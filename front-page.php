@@ -68,7 +68,7 @@ get_header();
 				</div>
 			</div>
 		</div>
-		<div class="middle-grey row">
+		<div id="production" class="middle-grey row">
 			<div class="content content-middle-grey">
 				<h1 class="content-header">Production</h1>
 				<hr class="content-hr">
@@ -114,7 +114,7 @@ get_header();
 				<p class="content-paragraph">&middot; Plywood thickness range is 4.5-40mm in form, quality and finishing scale requested by the client.</p>
 			</div>
 		</div>
-		<div class="middle-grey row">
+		<div id="products" class="middle-grey row">
 			<div class="content content-middle-grey">
 				<h1 class="content-header">Products</h1>
 				<hr class="content-hr">
@@ -157,7 +157,7 @@ get_header();
 				</div>
 			</div>
 		</div>
-		<div class="contact-info middle-grey row">
+		<div id="contact" class="contact-info middle-grey row">
 			<div class="col-12 col-lg-2"></div>
 			<div class="content contact-info-text col-12 col-lg-4">
 				<h1 class="content-header text-center text-lg-left">Zvemil d.o.o</h1>
